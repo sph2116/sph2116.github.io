@@ -121,7 +121,7 @@ header {
 }
 
 div.opener {
-    width: 40%;
+    width: 50%;
     position: absolute;
     bottom: 90px;
     left: 36px;
@@ -291,6 +291,20 @@ p.animal-text {
 }
 
 
+
+@media(max-width: 1000px){
+    div.opener {
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 50px;
+    }
+    
+    h4 {
+        font-size: 24px;
+    }
+}
 
 @media(min-width: 1800px){
     article.animal-text h5 {
