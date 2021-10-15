@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "GT Sectra";
+  src: url("GT-Sectra-Display-Medium-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Sectra";
+  src: url("GT-Sectra-Display-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pitch Sans";
+  src: url("PitchSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+h1 {
+/*    background-color:aqua;*/
+    font-family: "Pitch Sans";
+    font-size: 72px;
+    font-weight: 700;
+    font-style: normal;
+    color: #F0622D;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: "GT Sectra";
+    font-size:32px;
+    font-weight: 500;
+    font-style: italic;
+    color: #F0622D;
+}
+
+h5 {
+    font-family: "Pitch Sans";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height:55px;
+    color: #ffffff;
+}
+
+h6 {
+    font-family: "Pitch Sans";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height:20px;
+    color: #ffffff;
+}
+
+body {
+    max-width: 100vw;
+    min-width: 1200px;
+    overflow-x: hidden;
+/*    background-color: red;*/
+}
+
+nav.detail-nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height:36px;
+    transition: background-color .25s ease-in;
+/*    opacity: 0;*/
+}
+
+nav a{
+    display: block;
+/*    min-width: 100px;*/
+/*    background-color: pink;*/
+}
+
+svg#icon {
+    width: 32px;
+    height: 32px;
+    margin: 4px 16px 4px 0;
+}
+
+svg#icon:hover {
+    fill: #F0622D;
+}
+
+nav p {
+    font-family: "GT Sectra";
+    font-size:16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: #fff;
+    margin-left: 36px;
+    padding: 12px 0;
+    opacity:0;
+    transition: opacity .4s ease-in .1s;
+}
+
+
+header {
+    position: relative;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div.opener {
+    width: 40%;
+    position: absolute;
+    bottom: 90px;
+    left: 36px;
+/*
+    max-width: 910px;
+    min-width: 596px;
+*/
+/*    margin: 0 auto;*/
+    z-index: 2;
+}
+
+
+/*Header background video*/
+#deforestation-video{
+  position: relative;
+  top: 0;
+  left:0;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+
+main {
+    background-color: #000000;
+    padding: 36px 0;
+/*    min-height: 60vh;*/
+    min-width: 100vw;
+    position: relative;
+}
+
+main section {
+    margin-bottom: 128px;
+    margin-bottom: 128px;
+}
+
+p.running-text {
+    font-family: "GT Sectra";
+    font-size:24px;
+    line-height:32px;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFFFFF;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+
+span.animal-link {
+    font-family: "Pitch Sans";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height:26px;
+    color: #ffffff;
+    border: 2px dotted #fff;
+    padding: 1px 3px;
+    transition: color .2s, opacity .2s; 
+}
+
+span.animal-link:hover {
+    color: #F0622D;
+}
+
+article.animal-text {
+    background-color: #12310A;
+    min-height: 600px;
+    margin:64px 0 32px 0;
+    position: relative;
+}
+
+div.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+article.animal-text h5 {
+    position: relative;
+    background-color: red;
+    left: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 100px;
+    line-height: 0px;
+    pointer-events: none;
+}
+
+article.animal-text div div{
+    width: 50%;
+    margin-top: 36px;
+    min-height: 532px;
+/*    background-color: cadetblue;*/
+}
+
+div.image-container {
+    display: flex;
+    align-items:center;
+}
+
+article.animal-text img{
+    max-width: 100%;
+    margin: auto 0;
+}
+
+div.wrapper aside {
+    margin-left: 36px;
+}
+
+aside h6.red-list {
+    color: #2CFD06;
+    padding: 0 6px;
+    border: 1px solid #2CFD06;
+    width: fit-content;
+    max-width: 300px;
+    border-radius: 12px;
+    transform: translate(-8px);
+}
+
+div.close{
+/*    background-color: pink;*/
+    height: 32px;
+    text-align: center;
+    font-family: "Pitch Sans";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height:24px;
+    color: #ffffff;
+    transition: color .2s, opacity .2s; 
+}
+
+div.close:hover {
+     color: #F0622D;
+}
+
+
+p.animal-text {
+    font-family: "GT Sectra";
+    font-size:16px;
+    line-height:24px;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFFFFF;
+    width: 70%;
+    margin-top: 24px;
+    margin-left: 36px;
+/*    padding-top: 32px;*/
+}
+
+.none{
+    display:none;
+   
+}
+
+.show {
+    display: block;
+    
+}
+
+.transparent {
+     opacity: 0;
+}
+.opaque {
+    opacity: 1;
+}
+
+
+
+@media(min-width: 1800px){
+    article.animal-text h5 {
+        font-size: 140px;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    } 
+    
+    p.animal-text {
+/*        width: 50%;*/
+        font-size: 24px;
+        line-height: 32px;
+    }  
+    
+    p.running-text {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    span.animal-link {
+        font-size: 32px;
+    }
+}
+
+
+/*CSS RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+/*	font-size: 100%;*/
+/*	font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

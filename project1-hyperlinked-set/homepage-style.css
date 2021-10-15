@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "GT Sectra";
+  src: url("GT-Sectra-Display-Medium-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT Sectra";
+  src: url("GT-Sectra-Display-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pitch Sans";
+  src: url("PitchSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+    min-width: 1200px;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h2, h3 {
+    font-family: "GT Sectra", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+}
+
+h2 {
+ font-size: 60px;
+ line-height: 72px;
+}
+
+h3 {
+ font-size: 24px;
+ line-height: 40px; 
+}
+
+.opener{
+    background-color: black; 
+}
+
+div.opener {
+
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*For the intro text above the main nav*/
+section.opener div.section-header {
+    width: 30%;
+    max-width: 910px;
+    min-width: 596px;
+    margin: 0 auto;
+/*    background-color: red;*/
+}
+
+div.section-header h3 {
+    padding: 48px 0;
+}
+
+h2.intro {
+     width: 50%;
+     max-width: 910px;
+     min-width: 752px;
+    margin: 0 auto;
+}
+
+/*Section 1 background image styling*/
+#opener-1 div {
+    background-image: url(assets/elephant1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-position: center top;
+    margin: 0 auto;
+}
+
+#opener-2 {
+    position:relative;
+}
+
+#opener-2 div h2 {
+    z-index: 2;
+}
+
+/*Section 2 background video*/
+#deforestation-video{
+  position: absolute;
+  top: 0;
+  left:0;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+
+#opener-3 {
+    min-height: 100vh;
+    max-height: 150vh;
+    overflow: hidden;
+    position: relative;
+}
+
+nav.main-links {
+    width: 85%;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 0;
+/*    background-color: yellowgreen;*/
+    position: relative;
+    margin-bottom: 80px;
+}
+
+nav.main-links a{
+    display: block;
+    position: absolute;
+    text-decoration: none;
+/*    background-color: pink;*/
+    max-width: 200px;
+    margin:0;
+    
+    font-family: "Pitch Sans";
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height:26px;
+    color: #ffffff;
+    
+    transition: color .2s, opacity .2s;
+}
+
+#asian-rhino {
+    top: 40%;
+    right: 10%;
+}
+
+#bobak-marmot {
+    top: 10%;
+    left: 5%;
+}
+
+#coral-reef {
+    top: 20%;
+    left: 85%;
+}
+
+
+#corsac-fox {
+    top: 75%;
+    left: 27%;
+}
+
+#dusky-shark {
+    top: 30%;
+    left: 50%;
+}
+
+#orangutan {
+    top: 30%;
+    left: 0%;
+}
+
+#sea-turtle {
+    top: 60%;
+    left: 70%;
+}
+
+#snow-leopard {
+    top: 80%;
+    left: 55%;
+}
+
+#tiger {
+    top: 5%;
+    left: 65%;
+}
+
+#detergent {
+    top: 55%;
+    left: 5%;
+}
+
+#sweater {
+    top: 0;
+    right: 0;
+}
+
+#scampi {
+    top: 75%;
+    left: 85%;
+}
+
+#palm-oil {
+    top: 50%;
+    left: 25%;
+}
+
+#overgrazing {
+    top: 25%;
+    left: 27%;
+}
+
+#trawling {
+    top: 55%;
+    left: 49%;
+}
+
+
+/*Styling for different types of tags*/
+a.animal {
+    border: 2px dotted #fff;
+    padding: 4px 8px;
+}
+
+span.animal {
+    border: 2px dotted #fff;
+    padding: 1px 3px;
+}
+
+a.harmful-practices {
+    background-color: #800202;
+    padding: 4px 8px;
+}
+
+span.harmful-practices {
+    background-color: #800202;
+    padding: 1px 3px;
+}
+
+.human-activity {
+    border-bottom: 2px solid #fff;
+}
+
+svg {
+/*    display: inline-block;*/
+    z-index: 100;
+/*    background-color: green;*/
+    overflow: visible;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+}
+
+ 
+/*CSS RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+/*	font-size: 100%;*/
+/*	font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
