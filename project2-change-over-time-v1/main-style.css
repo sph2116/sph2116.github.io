@@ -49,6 +49,7 @@ body {
     justify-content: center;
     opacity: 1;
     transition: opacity .5s;
+    pointer-events: none;
 
 }
 
@@ -84,6 +85,8 @@ body {
     border-style: none;
     background-color: #205072;
     transition: background-color .5s;
+    pointer-events: auto;
+
 
 }
 
