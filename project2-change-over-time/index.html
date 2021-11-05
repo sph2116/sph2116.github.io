@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main-style.css">
+    <title>Just Breathe</title>
+</head>
+
+<body>
+   
+    <section class = "start-screen">
+        <h2>This site will gently remind you to take a break every hour for 10 minutes.</h2>
+        <button type = "button">Start</button>
+        <div class = "layer0"></div>    
+    </section>   
+    
+    <main>
+        <div class = "layer1"></div>
+        <div class = "layer2"></div> 
+        <div class = "layer3"></div>       
+      
+        <div class = "main-circle"></div>
+        <p id = "intro">It's time to take a breather for the next 10 minutes.</p>
+        <p id = "outro">Take 10 minutes to breathe every two hours. Your next breather starts in TIME.</p>
+
+        
+    <audio id = "bell" preload="auto" autobuffer>
+        <source src="assets/bell.mp3" type = "audio/mpeg"> 
+    </audio>
+    
+    <audio id = "music1" preload="auto">
+        <source src="assets/music-10min-compressed.mp3" type = "audio/mpeg"> 
+    </audio>
+    
+<!--<iframe width="0" height="0" src="https://www.youtube.com/embed/nkkJgdiR8IA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+    </main>
+      
+<script src="randomize.js"></script>
+   
+</body>
+</html>
