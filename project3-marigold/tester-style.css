@@ -1,0 +1,492 @@
+
+/*RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+/*
+input, textarea, select {
+  font: inherit;
+  font-family: inherit;
+
+}
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+@font-face {
+    font-family: "Marigold";
+    src: url("assets/Marigold-Color.otf");
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url("assets/GothamRounded-Book.otf");
+    font-weight: 400;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url("assets/GothamRounded-Bold.otf");
+    font-weight: 700;
+    font-style: normal; 
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+:root {
+    --glyph-library-width: 20%;
+}
+
+html {
+    font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    min-width: 1080px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    min-width: 1080px;
+    padding: 24px;
+    overflow: hidden;
+/*    background-color: beige;*/
+    display: flex;
+}
+
+#glyph-library {
+    width: var(--glyph-library-width);
+     min-width: 260px;
+    overflow-y: scroll;
+/*    position: fixed;*/    
+    height:100vh;
+    margin-right: 24px;
+    padding:24px;
+    border: 2px solid #000;
+    border-radius: 38px;
+}
+
+.library-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+} 
+
+.glyph {
+/*    background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    flex-basis: 60px;
+    flex-grow: 1;
+    max-width: 100px;
+/*    height: 60px;*/
+    margin: 5px;
+}
+
+.flower {
+    font-family: "Marigold";
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal; 
+    margin-bottom: 12px;
+}
+
+.flower-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.glyph-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 375px;
+    height: 375px;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10%;
+    opacity: 0;
+    padding: 16px;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+.flower-detail {
+    font-size: 150px;
+    line-height: 1;
+    margin: 3rem 0;
+}
+
+.flower-label-detail {
+    font-family: "Gotham Rounded";
+    font-weight: 700;
+    font-size: 1.25rem;
+/*    background-color: red;*/
+}
+
+/*
+.test {
+    
+    font-family: "Marigold";
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal; 
+}
+*/
+
+
+
+h3 {
+    font-family: "Gotham Rounded";
+    margin-top: 18px; 
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: normal; 
+}
+
+#tester {
+    width: calc(100% - var(--glyph-library-width));
+    height: 100%;
+    min-width: 820px;
+/*    background-color: seashell;*/
+}
+
+
+#options {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 24px;
+    font-family: "Gotham Rounded";
+    font-weight: 700;
+    font-size: .875rem;
+    min-width: 776px;
+/*    justify-content: space-between;*/
+}
+
+button {
+    font-family: "Gotham Rounded";
+    font-weight: 700;
+    font-size: .875rem;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    padding: .25rem 1rem;
+    border: 2px solid #000;
+    border-radius: 50px;
+    box-sizing: border-box;
+    height: 2rem;
+    background-color: transparent;
+    
+}
+
+/*
+div.hint {
+    width: 20rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    opacity: 1;
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+*/
+
+div.colors{
+  display: flex;
+}
+
+div.colors div{
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  text-align: center;
+  margin: 5px 10px 0 0;
+  transition: border 0.25s;
+}
+
+div.colors div.selected{
+  border: 2px solid #000;
+}
+
+
+
+#try {
+    font-family: "Gotham Rounded";
+    position: fixed;
+    top: 1.5rem;
+    right: 0;
+    display: block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--font-color1);
+    padding: 1.25rem;
+    border: 4px solid var(--font-color1);
+    border-radius: 50px;
+    width: 150px;
+/*    box-sizing: border-box;*/
+/*    height: 2rem;*/
+    background-color: transparent;
+    text-decoration: none;
+    transition: color .2s, border .2s;
+    margin: 0 auto;
+}
+
+#try:hover {
+    border: 4px solid var(--hover-color1);
+    color: var(--hover-color1);
+}
+
+#try div {
+    text-align: center;
+}
+
+
+
+/*INPUT SLIDER STYLING*/
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 40%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+margin: 18px 0;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 40%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink. You must repeat each selector individually */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 60%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: calc(-1 * .5rem); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders!*/
+
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/*STYLE INPUT SLIDER TRACK*/
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #000;
+  border-radius: 5px;
+  border: none;
+    display: inline-block;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #000;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #000;
+  border-radius: 5px;
+  border: none;
+    display: inline-block;
+
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+
+.input-wrapper {
+    display: inline-block;
+    margin-right: 24px;
+/*    background-color: beige;*/
+/*    min-width: 300px;*/
+}
+
+p.output {
+    display: inline-block;
+/*    background-color: red;*/
+
+}
+
+@font-feature-values 'Marigold' {
+  @stylistic { alt-a1: 1; alt-a2: 3 }
+}
+
+textarea {
+  background-color: transparent;
+    padding-top: .75em;
+  display: block;
+  overflow: auto;
+  width: 10vw;
+  max-width: 60vw;
+  border: 1px solid #000;
+  resize: both;
+  color: red;
+  font-family: "Marigold";
+  font-size: 75px;
+  font-weight: 400;
+  font-style: normal; 
+    border: none;
+    resize: none;
+/*    font-feature-settings: 'salt' 1;*/
+/*    font-variant-alternates: stylistic(alt-a2);*/
+}
+
+textarea:hover {
+    border: solid .5px #000;
+    outline-color: #000;
+}
+
+textarea:focus {
+    border: solid .5px #000;
+    outline-color: #000;
+    outline-width: .5px;
+}
+
+canvas div.test {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

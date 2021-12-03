@@ -1,0 +1,380 @@
+
+/*RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+  font-family: inherit;
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/*END RESET*/
+
+/*ANIMATIONS*/
+
+@keyframes spin{
+  0%{ transform: translate(-50%,-50%) rotate(0deg);}
+  100%{ transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+/*TYPEFACES*/
+@font-face {
+    font-family: "Marigold";
+    src: url("assets/Marigold-Regular.otf");
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url("assets/GothamRounded-Book.otf");
+    font-weight: 400;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url("assets/GothamRounded-Bold.otf");
+    font-weight: 700;
+    font-style: normal; 
+}
+
+:root {
+    --background-color1: #F1FFDB;
+    --font-color1: #5E8E25;
+    --font-size-l: 18.75rem;
+    --font-size-m: 3rem;
+    --hover-color1:#4A711D;
+}
+
+html {
+    font-family: "Gotham Rounded", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+     color: var(--font-color1);
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+body{
+    width: 100vw;
+    background-color: var(--background-color1);
+    max-width: 1600px;
+    min-height: 750px;
+    margin: 0 auto;
+}
+
+p{
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: var(--font-size-l);
+    margin-bottom: calc(2 * var(--font-size-m));
+    font-weight: 700;
+    text-align: center;
+    color: var(--font-color1);
+    position: relative;
+    transform: translateY(50%);
+/*     background-color: antiquewhite;*/
+}
+
+h2 {
+    font-size: var(--font-size-m);
+    font-weight: 700;
+/*    text-align: center;*/
+    color: var(--font-color1);
+    margin-bottom: 2rem;
+/*     background-color: antiquewhite;*/
+    
+}
+
+h3 {
+    font-size: var(--font-size-m);
+    line-height: calc(1.25 * var(--font-size-m));
+    position: relative;
+     font-weight: 700;
+    text-align: center;
+    color: var(--font-color1);
+    max-width: 60%;
+    margin: calc(1.5 * var(--font-size-m));
+/*    background-color: antiquewhite;*/
+}
+
+section{ 
+    width: 100%;
+    margin-bottom: var(--font-size-l);
+}
+
+/*TOP SECTION*/
+#top-section {
+    position: relative;
+    top: 4rem;
+/*    background-color: red;*/
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+/*     background-color: white;*/
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96vw;
+    margin: .5rem 1.5rem;
+    border: 2px solid var(--font-color1);
+    border-radius: 1rem;
+    background-color: var(--background-color1);
+    display: flex;
+    justify-content: space-between;
+/*    padding: 0 2rem;*/
+    z-index: 2;  
+}
+
+nav div {
+    height: 3rem;
+/*    background-color: antiquewhite;*/
+    width: 33.33%;
+    text-align: center;
+    padding: 1rem 0;
+
+}
+
+nav div a {
+    color: var(--font-color1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+/*    background-color: aqua;*/
+        vertical-align: middle;
+    
+}
+
+nav div:nth-child(2) {
+    border-left: 2px solid var(--font-color1);
+    border-right: 2px solid var(--font-color1);
+    color: red;
+} 
+
+#try {
+    font-family: "Gotham Rounded";
+    display: block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--font-color1);
+    padding: 1.25rem;
+    border: 4px solid var(--font-color1);
+    border-radius: 50px;
+    width: 150px;
+/*    box-sizing: border-box;*/
+/*    height: 2rem;*/
+    background-color: transparent;
+    text-decoration: none;
+    transition: color .2s, border .2s;
+    margin: 0 auto;
+}
+
+#try:hover {
+    border: 4px solid var(--hover-color1);
+    color: var(--hover-color1);
+}
+
+#try div {
+    text-align: center;
+}
+
+/*DESIGN CONCEPT*/
+.concept {
+    width: 100%;
+    display: flex;
+}
+
+.concept div {
+    width: 50%;
+    padding: 1.5rem;
+}
+
+p.description {
+    max-width: 80%;
+}
+
+.concept div img {
+/*    height: 60vh;*/
+    width: auto;
+}
+
+/*GALLERY*/
+.gallery-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+*/
+/*    background-color: aliceblue;*/
+}
+
+div.gallery-item {
+
+/*
+    width: 40%;
+    max-width: 550px;
+    height: 25rem;
+    border: 1px solid var(--font-color1);
+    margin: 3rem;
+*/
+
+}
+
+div.gallery-item img {
+/*
+    max-width: 100%;
+    display: block;
+    transition: opacity .2s;
+*/
+/*
+    width: 100%;
+    max-height: 100%;
+*/
+}
+
+/*GLYPH SECTION*/
+
+.glyph {
+/*    background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    flex-basis: 60px;
+    flex-grow: 1;
+/*    max-width: 100px;*/
+/*    height: 60px;*/
+    margin: 5px;
+}
+
+.flower {
+    font-family: "Marigold";
+    font-size: 75px;
+    font-weight: 400;
+    font-style: normal; 
+/*    margin-bottom: 12px;*/
+}
+
+.flower-label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+div.flex-wrapper {
+    display: flex;
+}
+
+.flex-wrapper div {
+    width: 50%;
+}
+
+div.glyph-library {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+
+/*STAMPS*/
+div.stamps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+/*    background-color: red;*/
+}
+
+div.stamps img{
+  position: absolute; 
+  /*Need to position absolutely for elements to respond to top/left style	*/
+  /* transform: translate(-50%,-50%);  Need to translate so stickers placed in the middle of the mouse click. However when you add the spin animation, it overwrites this transform because trasforms are not additive in CSS. You have to add this transform to the animation itself for it to show up */
+    width: 100px;
+    height: 100px;
+  animation: spin 30s linear infinite;
+}
+
+@media only screen and (max-width: 1400px){
+    :root {
+        --font-size-l: 200px;
+        --font-size-m: 28px;    
+    }
+    
+    h1{
+        margin-bottom: calc(3 * var(--font-size-m));
+    }
+    
+    h3 {
+        max-width: 80%;
+    }
+}
