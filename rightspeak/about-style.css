@@ -1,0 +1,475 @@
+/*RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+  font-family: inherit;
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/*END RESET*/
+
+:root {
+    --background-color1: #E8E5DB;
+    --caption-color: #766961;
+    --highlight-color: #D81808;
+}
+
+html{
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+/*    background-color: #fff;*/
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+        min-width: 1000px;
+
+}
+
+/*TYPOGRAPHY*/
+h1{
+    font-size: 8rem;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.75rem;
+    width: 80%;
+    margin: 10rem 0 6rem 0;
+    line-height: 1.3;
+    max-width: 1200px;
+    position: relative;
+/*    background-color: antiquewhite;*/
+}
+
+h2.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p.byline {
+    text-align: center;
+    line-height: 1.5;
+}
+
+h2 span {
+    font-size: 1rem;
+    color: var(--caption-color);
+    font-weight: normal;
+}
+
+p.main-text {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+#first-paragraph {
+    margin-top: 2rem;
+}
+
+blockquote {
+    font-size: 1.25rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2rem;
+    color: var(--caption-color);
+    font-style: italic;
+    margin-bottom: 5rem; 
+}
+
+.article-wrapper h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .25rem;
+    margin: 2.5rem 0 1.25rem 0;
+    line-height: 1.4;
+}
+
+/* LINKS */
+
+a.link-external, a.link-external:hover, a.link-external:visited {
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+
+a.link-external:hover {
+    text-decoration: underline;
+}
+
+.launch-icon {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    transform: translate(2px, -1px);
+}
+
+a.link-category {
+    text-decoration: none;
+    border: 1.5px solid #000;
+    border-radius: 1rem;
+    color: #000;
+    padding: 0 .5rem;
+     transition: border, color .1s;
+}
+
+a.link-category:hover {
+    text-decoration: none;
+    border: 1.5px solid var(--highlight-color);
+    color:  var(--highlight-color); 
+}
+
+a.link-detail {
+    text-decoration: none;
+    border-bottom: 2px dotted var(--highlight-color);
+    background-color: black;
+    color: #fff;
+    padding: 0 .25rem;
+    transition: background-color .1s;
+}
+
+a.link-detail:hover {
+    text-decoration: none;
+    background-color: var(--highlight-color);
+}
+
+.video-link {
+    display: inline-block;
+/*    border-bottom: 2px dotted #000;*/
+    cursor: pointer;
+    color: white;
+    background-color: var(--caption-color);
+}
+
+/*HEADER*/
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+/*    background-color: #fff;*/
+/*    background-color: antiquewhite;*/
+/*    top: calc(-2 * var(--header-height));*/
+    transition: top .5s;
+    z-index: 3;
+    color: #000;
+    font-size: 1.25rem;
+}
+
+header .background {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    opacity: 1;
+      filter: blur(8px);
+  -webkit-filter: blur(8px);
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .75rem;
+}
+
+.scrolled {
+    top: 0;
+}
+
+header a, header a:visited {
+    color: #000;    
+  text-decoration: none;
+/*    background-color: red;*/
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+
+
+.toggle-nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateY(-2px);
+    vertical-align: middle;
+    margin: 0 8px 0 0;
+}
+
+
+header svg {
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateY(-2px);
+}
+
+header svg#menu {
+    margin: 0 8px 0 0;
+}
+
+header svg#right-arrow {
+    margin: 0 0 0 8px;
+}
+
+/*MAIN CONTAINERS*/
+
+main {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    transition: transform 0.5s;
+/*    background-color: aqua;*/
+}
+
+/*
+.essay {
+    width: 50%;
+    position: relative;
+
+}
+*/
+
+.article-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.essay-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    padding: 3rem;
+/*    background-color: #fff;*/
+    background-color: var(--background-color1);
+    max-width: 1000px;
+    box-shadow: 8px 8px 13px rgba(0,0,0,.1);
+    z-index: 1;
+/*    background-color: red;*/
+}
+
+
+i {
+    font-style:italic;
+}
+
+
+
+/*NAVIGATION*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+    padding: 3rem 1.5rem;
+  width: 320px;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+/*  justify-content: center;*/
+    z-index: -3;
+}
+
+nav a {
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px 0 5px 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+    transition: color .1s;
+}
+
+nav a:first-child {
+    margin-bottom: 12px;
+}
+
+a:hover{
+/*    color: var(--highlight-color);*/
+    text-decoration: underline;
+}
+
+nav p {
+    font-size: .875rem;
+    font-style: italic;
+    margin: 1rem 0 .5rem 0;
+    color: #fff;
+}
+
+.open{
+  transform: translate(320px,0);
+}
+
+.nav-open{
+    z-index: 10;
+}
+
+
+
+video {
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+    opacity: .7;
+    display: none;
+    pointer-events: none;
+    transform: translateY(-50%);
+    
+}
+
+/*STAMPS*/
+div.stamps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+/*
+    background-color: red;
+    opacity: .75;
+*/
+}
+
+div.stamps img{
+  position: absolute; 
+    width: 100px;
+    height: 100px;
+    
+}
+
+@media only screen and (max-height: 800px){
+    video {
+        width: auto;
+        height: 80vh;
+        margin: 0 auto;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }    
+
+}
+
+@media (min-aspect-ratio: 2/1){
+     video {
+        width: auto;
+        height: 80vh;
+        margin: 0 auto;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }   
+}
+
+@media only screen and (max-width: 1100px){
+    
+/*
+    .essay-wrapper {
+        width: 98%;
+    }
+*/
+}
+
+
+@media only screen and (max-width: 1300px){
+    h1 {
+        font-size: 5rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .essay-wrapper {
+        width: 80%;
+    }
+    
+    p.main-text {
+        font-size: 1.2rem;
+    }
+}
+
