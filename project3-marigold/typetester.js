@@ -1,6 +1,7 @@
 const buttonTag = document.getElementById("newTextbox");
 const outputTag = document.getElementById("output");
 const mainTag = document.querySelector("main");
+const bodyTag = document.querySelector("body");
 let parentRect = outputTag.getBoundingClientRect();
 const test = document.querySelector("textarea.test")
 let textBoxes = []
@@ -71,9 +72,28 @@ rotateTag.addEventListener(`input`, function(){
 //})
 
 //COLOR PICKER. Go through all of my color tags and when one is selected change the bkg color and text color and highlight the tag in selected state
+let r = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  let rs = getComputedStyle(r);
+  // Alert the value of the --font-color1 variable
+  console.log("The value of --font-color1 is: " + rs.getPropertyValue('--font-color1'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --font-color1 to another value (in this case "lightblue")
+  r.style.setProperty('--font-color1', 'lightblue');
+}
+
 colorTags.forEach(tag => {
   tag.addEventListener('click', function(){
-   mainTag.style.backgroundColor = this.style.backgroundColor
+   bodyTag.style.backgroundColor = this.style.backgroundColor
+    r.style.setProperty('--font-color1', `${this.style.color}`);
+    r.style.setProperty('--hover-color1', `${this.style.color}`); 
+      
     glyphDetailDiv.style.backgroundColor = this.style.backgroundColor
 //      outputTag.style.backgroundColor = "#000"
       console.log("background color " + this.style.backgroundColor)
@@ -178,9 +198,9 @@ function newTextbox() {
     typeSizeOutputTag.innerHTML = "75px"
     typeSizeTag.value = 75
     
-    textBox.style.width = 100 + "px"
-    widthOutputTag.innerHTML = "100px"
-    widthTag.value = 100
+    textBox.style.width = 200 + "px"
+    widthOutputTag.innerHTML = "200px"
+    widthTag.value = 200
     
     textBox.style.lineHeight = 1
     heightOutputTag.innerHTML = "1"

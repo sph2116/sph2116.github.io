@@ -77,7 +77,7 @@ input, textarea, select {
 /*TYPEFACES*/
 @font-face {
     font-family: "Marigold";
-    src: url("assets/Marigold-Regular.otf");
+    src: url("assets/Marigold-Color.otf");
 }
 
 @font-face {
@@ -114,6 +114,7 @@ html {
 body{
     width: 100vw;
     background-color: var(--background-color1);
+    min-width: 1100px;
     max-width: 1600px;
     min-height: 750px;
     margin: 0 auto;
@@ -121,6 +122,10 @@ body{
 
 p{
     line-height: 1.3;
+}
+
+i {
+    font-style: italic;
 }
 
 h1 {
@@ -156,8 +161,17 @@ h3 {
 /*    background-color: antiquewhite;*/
 }
 
+a {
+    color: var(--font-color1);
+}
+
+a:hover {
+    font-weight: 700;
+}
+
 section{ 
     width: 100%;
+    padding: 0 2rem 0;
     margin-bottom: var(--font-size-l);
 }
 
@@ -179,10 +193,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 96vw;
-    margin: .5rem 1.5rem;
-    border: 2px solid var(--font-color1);
-    border-radius: 1rem;
+    width: 100vw;
+    padding: .5rem 1.5rem;
+/*    border: 2px solid var(--font-color1);*/
+/*    border-radius: 1rem;*/
     background-color: var(--background-color1);
     display: flex;
     justify-content: space-between;
@@ -190,29 +204,58 @@ nav {
     z-index: 2;  
 }
 
+/*
 nav div {
     height: 3rem;
-/*    background-color: antiquewhite;*/
-    width: 33.33%;
+    background-color: antiquewhite;
+    width: 50%;
     text-align: center;
     padding: 1rem 0;
+    transition: background-color .2s;
 
 }
 
-nav div a {
+nav div:hover {
+    background-color: var(--font-color1);
+    color: #fff;
+}
+*/
+
+nav a {
+    display: inline-block;
+    height: 3rem;
+    width: 50%;
+    text-align: center;
+    padding: 1rem 0;
     color: var(--font-color1);
+/*    border-radius: 1rem;*/
+
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
 /*    background-color: aqua;*/
         vertical-align: middle;
     
+        transition: background-color .2s;
+
 }
 
-nav div:nth-child(2) {
-    border-left: 2px solid var(--font-color1);
-    border-right: 2px solid var(--font-color1);
-    color: red;
+nav a:hover {
+    background-color: var(--font-color1);
+    color: #fff;
+}
+
+nav a:nth-child(1) {
+    border: 2px solid var(--font-color1);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+} 
+
+nav a:nth-child(2) {
+    border: 2px solid var(--font-color1);
+    border-left: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 } 
 
 #try {
@@ -304,44 +347,62 @@ div.gallery-item img {
 
 /*GLYPH SECTION*/
 
+div.glyph-library {
+    display: grid;
+/*    grid-template-columns: repeat(10,1fr);*/
+    grid-template-columns: repeat(10,minmax(100px,180px));
+}
+
 .glyph {
 /*    background-color: aqua;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4px;
+/*    padding: 4px;*/
+/*
     flex-basis: 60px;
     flex-grow: 1;
+*/
+    border: 1px solid var(--font-color1);
 /*    max-width: 100px;*/
 /*    height: 60px;*/
-    margin: 5px;
+/*    margin: 5px;*/
 }
 
 .flower {
     font-family: "Marigold";
-    font-size: 75px;
+    font-size: 4.5rem;
+    line-height: 2;
     font-weight: 400;
     font-style: normal; 
+/*    background-color: azure;*/
 /*    margin-bottom: 12px;*/
 }
 
 .flower-label {
     font-size: 1rem;
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 div.flex-wrapper {
     display: flex;
+    margin-bottom: 2rem;
 }
 
 .flex-wrapper div {
     width: 50%;
 }
 
-div.glyph-library {
+/* FEATURES SECTION*/
+.features-grid {
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: 50% 50%;
+}
+
+#grid-span {
+    grid-column: 1 / 3;
 }
 
 /*STAMPS*/
@@ -376,5 +437,15 @@ div.stamps img{
     
     h3 {
         max-width: 80%;
+    }
+    
+    .flower {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    p {
+        font-size: 20px;
     }
 }
